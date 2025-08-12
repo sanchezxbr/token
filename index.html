@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Mudamos de site • Redirecionando...</title>
+     Fallback sem JavaScript: ajuste a URL abaixo se quiser usar meta refresh 
+    <meta http-equiv="refresh" content="10; url=https://novo-site.exemplo.com" />
+    <meta name="theme-color" content="#000000" />
+    <style>
+      :root {
+        --bg: #0a0a0a;
+        --text: #ffffff;
+        --muted: #9ca3af;
+        --blue: #3b82f6; /* azul principal */
+        --blue-2: #60a5fa; /* azul claro para efeitos */
+        --border: rgba(59, 130, 246, 0.35);
+        --shadow: 0 10px 30px rgba(59, 130, 246, 0.15);
+      }
+
+      * { box-sizing: border-box; }
+      html, body {
+        height: 100%;
+        background: var(--bg);
+        color: var(--text);
+        margin: 0;
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+          Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      .sr-only {
+        position: absolute !important;
+        width: 1px !important;
+        height: 1px !important;
+        padding: 0 !important;
+        margin: -1px !important;
+        overflow: hidden !important;
+        clip: rect(0,0,0,0) !important;
+        white-space: nowrap !important;
+        border: 0 !important;
+      }
+
+      .wrap {
+        position: relative;
+        min-height: 100%;
+        display: grid;
+        place-items: center;
+        padding: 24px;
+        overflow: hidden;
+      }
+
+      /* Efeitos azuis de fundo */
+      .fx {
+        position: absolute;
+        inset: -20%;
+        pointer-events: none;
+        background:
+          radial-gradient(1200px 600px at 10% -10%, rgba(59, 130, 246, 0.18), transparent 60%),
+          radial-gradient(800px 500px at 110% 20%, rgba(96, 165, 250, 0.12), transparent 60%),
+          radial-gradient(700px 400px at 50% 120%, rgba(59, 130, 246, 0.08), transparent 60%);
+        filter: saturate(120%);
+        animation: float 16s ease-in-out infinite alternate;
+      }
+      @keyframes float {
+        0%   { transform: translateY(0) translateX(0) scale(1); }
+        100% { transform: translateY(-2%) translateX(1%) scale(1.02); }
+      }
+
+      .card {
+        position: relative;
+        width: 100%;
+        max-width: 720px;
+        background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: clamp(20px, 4vw, 36px);
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(6px);
+      }
+      .glow {
+        position: absolute;
+        inset: -2px;
+        border-radius: 16px;
+        background: radial-gradient(120% 120% at 50% -20%, rgba(59, 130, 246, 0.55), transparent 60%);
+        filter: blur(24px);
+        opacity: 0.35;
+        z-index: -1;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--text);
+        text-decoration: none;
+        margin-bottom: 14px;
+      }
+      .brand-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 999px;
+        background: linear-gradient(135deg, var(--blue), var(--blue-2));
+        box-shadow: 0 0 18px rgba(59,130,246,.7), 0 0 32px rgba(96,165,250,.4);
+      }
+      .brand-name {
+        font-weight: 600;
+        letter-spacing: .2px;
+        opacity: .9;
+      }
+
+      /* Transição de marca (logo antiga -> logo nova) */
+      .brand-transition {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 6px 0 14px 0;
+      }
+      .brand-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 10px;
+        border-radius: 9999px;
+        background: rgba(255,255,255,0.04);
+        border: 1px solid var(--border);
+      }
+      .brand-chip.new {
+        border-color: rgba(96,165,250,.55);
+        box-shadow: 0 0 0 1px rgba(96,165,250,.15), 0 10px 20px rgba(59,130,246,.15);
+      }
+      .chip-logo {
+        width: clamp(28px, 5vw, 40px);
+        height: clamp(28px, 5vw, 40px);
+        border-radius: 9999px;
+        overflow: hidden;
+        background: linear-gradient(135deg, var(--blue), var(--blue-2));
+        display: grid;
+        place-items: center;
+        box-shadow: 0 0 10px rgba(59,130,246,.6);
+      }
+      .chip-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      .arrow {
+        color: var(--blue-2);
+        font-weight: 700;
+        margin: 0 4px;
+        text-shadow: 0 0 10px rgba(96,165,250,.4);
+      }
+
+      h1 {
+        font-size: clamp(22px, 3vw, 32px);
+        line-height: 1.2;
+        margin: 6px 0 10px 0;
+      }
+      .lead {
+        color: var(--muted);
+        font-size: clamp(14px, 1.7vw, 16px);
+        line-height: 1.6;
+        margin: 0 0 18px 0;
+      }
+
+      .target {
+        display: inline-block;
+        color: var(--text);
+        text-decoration: none;
+        border-bottom: 1px dashed rgba(96,165,250,.6);
+        transition: color .2s ease, border-color .2s ease;
+      }
+      .target:hover { color: var(--blue-2); border-color: var(--blue-2); }
+
+      .status {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 18px 0 24px 0;
+        font-size: clamp(14px, 1.7vw, 16px);
+        color: var(--text);
+      }
+      .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 999px;
+        background: var(--blue);
+        box-shadow: 0 0 10px rgba(59,130,246,.8);
+        animation: pulse 1.4s ease-in-out infinite;
+      }
+      @keyframes pulse {
+        0%, 100% { transform: scale(1); opacity: .9; }
+        50%      { transform: scale(1.25); opacity: .6; }
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+      .btn {
+        appearance: none;
+        border: 0;
+        cursor: pointer;
+        padding: 12px 16px;
+        font-weight: 600;
+        border-radius: 10px;
+        transition: transform .08s ease, box-shadow .2s ease, background .2s ease;
+        will-change: transform;
+      }
+      .btn-primary {
+        color: #081225;
+        background: linear-gradient(135deg, var(--blue), var(--blue-2));
+        box-shadow: 0 10px 18px rgba(59,130,246,.25), inset 0 1px 0 rgba(255,255,255,.25);
+      }
+      .btn-primary:hover { box-shadow: 0 12px 22px rgba(59,130,246,.32), inset 0 1px 0 rgba(255,255,255,.3); }
+      .btn-primary:active { transform: translateY(1px); }
+
+      .btn-ghost {
+        background: transparent;
+        color: var(--text);
+        border: 1px solid rgba(148,163,184,.25);
+      }
+      .btn-ghost:hover {
+        border-color: rgba(148,163,184,.4);
+        background: rgba(255,255,255,.03);
+      }
+      .btn-ghost:active { transform: translateY(1px); }
+
+      .fine-print {
+        margin-top: 14px;
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      @media (min-width: 780px) {
+        .card { padding: 40px 44px; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="fx" aria-hidden="true"></div>
+
+      <main class="card" role="main" aria-labelledby="title">
+        <div class="glow" aria-hidden="true"></div>
+
+        <a class="brand" href="https://novo-site.exemplo.com" aria-label="Ir para o novo site">
+          <span class="brand-dot" aria-hidden="true"></span>
+          <span class="brand-name">Estamos de casa nova</span>
+        </a>
+
+         Transição visual: logo antiga -> logo nova (somente imagens) 
+        <div class="brand-transition" aria-label="Transição de logo">
+          <div class="brand-chip old">
+            <span class="chip-logo">
+              <img id="old-logo" class="chip-img" src="/placeholder.svg" alt="Logo antiga" loading="lazy" decoding="async" />
+            </span>
+            <span class="sr-only">Logo antiga</span>
+          </div>
+          <span class="arrow" aria-hidden="true">→</span>
+          <div class="brand-chip new">
+            <span class="chip-logo">
+              <img id="new-logo" class="chip-img" src="/placeholder.svg" alt="Logo nova" loading="lazy" decoding="async" />
+            </span>
+            <span class="sr-only">Logo nova</span>
+          </div>
+        </div>
+
+        <h1 id="title">Trocamos de site</h1>
+        <p class="lead">
+          Você será redirecionado automaticamente para o nosso novo endereço em
+          <strong><span id="countdown">10</span>s</strong>.
+        </p>
+
+        <div class="status" aria-live="polite" aria-atomic="true">
+          <span class="dot" aria-hidden="true"></span>
+          <span id="status-text">Preparando o redirecionamento...</span>
+        </div>
+
+        <div class="actions">
+          <a class="btn btn-primary" id="go-now" href="https://novo-site.exemplo.com">
+            Ir agora
+          </a>
+          <button class="btn btn-ghost" id="copy-link" type="button">
+            Copiar link
+          </button>
+        </div>
+
+        <p class="fine-print">
+          Se o redirecionamento não ocorrer, acesse:
+          <a class="target" href="https://novo-site.exemplo.com" id="plain-link">
+            https://novo-site.exemplo.com
+          </a>
+        </p>
+      </main>
+    </div>
+
+    <script>
+      // CONFIGURE AQUI
+      const redirectURL = "https://novo-site.exemplo.com";
+      const REDIRECT_AFTER = 10;
+
+      // Informe as URLs das suas logos (pode ser caminho local ou URL remota)
+      // Ex.: "/logos/logo-antiga.png" e "/logos/logo-nova.png"
+      const OLD_LOGO_URL = "/logos/logo-antiga.png";
+      const NEW_LOGO_URL = "/logos/logo-nova.png";
+
+      // Elementos
+      const countdownEl = document.getElementById("countdown");
+      const statusText = document.getElementById("status-text");
+      const goNow = document.getElementById("go-now");
+      const copyBtn = document.getElementById("copy-link");
+      const plainLink = document.getElementById("plain-link");
+
+      // Logos
+      const oldLogo = document.getElementById("old-logo");
+      const newLogo = document.getElementById("new-logo");
+      if (OLD_LOGO_URL) oldLogo.src = OLD_LOGO_URL;
+      if (NEW_LOGO_URL) newLogo.src = NEW_LOGO_URL;
+
+      // Garantir que todos os links/botões apontem para a mesma URL
+      goNow.href = redirectURL;
+      plainLink.href = redirectURL;
+      plainLink.textContent = redirectURL;
+
+      // Contagem regressiva + redirecionamento
+      let remaining = REDIRECT_AFTER;
+      countdownEl.textContent = String(remaining);
+      statusText.textContent = "Você será redirecionado em " + remaining + " segundos.";
+
+      const timer = setInterval(() => {
+        remaining -= 1;
+        countdownEl.textContent = String(remaining);
+        statusText.textContent =
+          remaining > 0
+            ? "Você será redirecionado em " + remaining + " segundos."
+            : "Redirecionando...";
+
+        if (remaining <= 0) {
+          clearInterval(timer);
+          try {
+            window.location.assign(redirectURL);
+          } catch {
+            window.location.href = redirectURL;
+          }
+        }
+      }, 1000);
+
+      // Copiar link
+      copyBtn.addEventListener("click", async () => {
+        try {
+          await navigator.clipboard.writeText(redirectURL);
+          copyBtn.textContent = "Link copiado!";
+          setTimeout(() => (copyBtn.textContent = "Copiar link"), 1600);
+        } catch {
+          copyBtn.textContent = "Falha ao copiar";
+          setTimeout(() => (copyBtn.textContent = "Copiar link"), 1600);
+        }
+      });
+    </script>
+
+    <noscript>
+      <style>#status-text { display: none; }</style>
+      <div style="position: fixed; inset: auto 0 12px 0; text-align: center; color: #9ca3af; font-size: 14px;">
+        JavaScript desativado: você será redirecionado automaticamente. Se preferir, acesse:
+        <a href="https://novo-site.exemplo.com" style="color:#60a5fa;">https://novo-site.exemplo.com</a>
+      </div>
+    </noscript>
+  </body>
+</html>
