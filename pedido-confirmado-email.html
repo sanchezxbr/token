@@ -1,0 +1,393 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--$-->
+<html dir="ltr" lang="pt-BR">
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+    <meta name="x-apple-disable-message-reformatting" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pedido confirmado</title>
+    <style type="text/css">
+      /* CSS pequeno para responsividade (compatível com vários clientes) */
+      @media only screen and (max-width: 600px) {
+        .container {
+          width: 100% !important;
+        }
+        .px {
+          padding-left: 16px !important;
+          padding-right: 16px !important;
+        }
+        .stack {
+          display: block !important;
+          width: 100% !important;
+        }
+        .stack + .stack {
+          margin-top: 8px !important;
+        }
+        .btn {
+          width: 100% !important;
+          box-sizing: border-box !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body
+    style="
+      margin: 0;
+      padding: 0;
+      background-color: #0b0d10;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial,
+        sans-serif;
+      color: #ffffff;
+      line-height: 1.4;
+    "
+  >
+    <!-- Preheader (texto de pré-visualização no cliente de e-mail) -->
+    <div
+      style="
+        display: none;
+        overflow: hidden;
+        line-height: 1px;
+        opacity: 0;
+        max-height: 0;
+        max-width: 0;
+      "
+    >
+      Pedido confirmado!
+      <div>
+        ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿
+      </div>
+    </div>
+
+    <table
+      width="100%"
+      border="0"
+      cellpadding="0"
+      cellspacing="0"
+      role="presentation"
+      style="width: 100%; background-color: #0b0d10"
+    >
+      <tbody>
+        <tr>
+          <td align="center" style="padding: 0; margin: 0">
+            <table
+              width="600"
+              border="0"
+              cellpadding="0"
+              cellspacing="0"
+              role="presentation"
+              class="container"
+              style="width: 600px; max-width: 600px"
+            >
+              <tbody>
+                <!-- Topo -->
+                <tr>
+                  <td class="px" style="padding: 18px 24px; background-color: #0b0d10">
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+                      <tbody>
+                        <tr>
+                          <td align="left" valign="middle" style="padding: 0">
+                            <a
+                              href="<%= cc.store.active_domain %>"
+                              target="_blank"
+                              style="text-decoration: none; display: inline-block"
+                            >
+                              <img
+                                src="https://i.ibb.co/ksnP6q2C/Design-sem-nome-9.png"
+                                width="140"
+                                alt="Logo"
+                                style="
+                                  display: block;
+                                  width: 140px;
+                                  max-width: 140px;
+                                  height: auto;
+                                  border: 0;
+                                  outline: none;
+                                  border-radius: 16px;
+                                "
+                              />
+                            </a>
+                          </td>
+
+                          <td align="right" valign="middle" style="padding: 0">
+                            <a
+                              href="<%= cc.store.active_domain %>/order/<%= cc.order.internal_id %>"
+                              target="_blank"
+                              style="
+                                color: #ffffff;
+                                text-decoration: none;
+                                font-size: 14px;
+                                font-weight: 800;
+                                letter-spacing: 0.2px;
+                                -webkit-user-select: all;
+                                user-select: all;
+                              "
+                              >#<%= cc.order.internal_id %></a
+                            >
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td style="height: 14px; line-height: 14px; font-size: 0">&nbsp;</td>
+                </tr>
+
+                <!-- Cards (um conjunto por pacote) -->
+                <% cc.order.packages.forEach((package, index) => { %>
+                <tr>
+                  <td class="px" style="padding: 0 24px">
+                    <!-- Card 1 — Confirmação do produto -->
+                    <table
+                      width="100%"
+                      border="0"
+                      cellpadding="0"
+                      cellspacing="0"
+                      role="presentation"
+                      style="background-color: #191c20; border-radius: 16px"
+                    >
+                      <tbody>
+                        <tr>
+                          <td style="padding: 20px">
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+                              <tbody>
+                                <tr>
+                                  <td class="stack" valign="top" style="padding: 0">
+                                    <p
+                                      style="
+                                        margin: 0 0 8px 0;
+                                        font-size: 12px;
+                                        color: #cbd5e1;
+                                        letter-spacing: 0.2px;
+                                      "
+                                    >
+                                      Você comprou:
+                                      <strong style="color: #ffffff"><%= package.name %></strong>
+                                    </p>
+                                    <p
+                                      style="
+                                        margin: 0;
+                                        font-size: 16px;
+                                        line-height: 1.25;
+                                        font-weight: 900;
+                                        color: #ffffff;
+                                      "
+                                    >
+                                      Sua compra já está disponível. Aproveite!
+                                    </p>
+                                  </td>
+
+                                  <td class="stack" align="right" valign="top" style="padding: 0 0 0 14px">
+                                    <% if (package.meta.image) { %>
+                                    <img
+                                      src="<%= package.meta.image %>"
+                                      width="110"
+                                      alt="Produto"
+                                      style="
+                                        display: block;
+                                        width: 110px;
+                                        height: auto;
+                                        border-radius: 12px;
+                                        border: 0;
+                                        outline: none;
+                                      "
+                                    />
+                                    <% } else { %>
+                                    <img
+                                      src="https://cdn.centralcart.com.br/public/email/no-image.png"
+                                      width="110"
+                                      alt="Produto"
+                                      style="
+                                        display: block;
+                                        width: 110px;
+                                        height: auto;
+                                        border-radius: 12px;
+                                        border: 0;
+                                        outline: none;
+                                      "
+                                    />
+                                    <% } %>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <div style="height: 12px; line-height: 12px; font-size: 0">&nbsp;</div>
+
+                    <!-- Card 2 — Instruções de resgate -->
+                    <table
+                      width="100%"
+                      border="0"
+                      cellpadding="0"
+                      cellspacing="0"
+                      role="presentation"
+                      style="background-color: #191c20; border-radius: 16px"
+                    >
+                      <tbody>
+                        <tr>
+                          <td style="padding: 20px">
+                            <p style="margin: 0 0 8px 0; font-size: 14px; font-weight: 800; color: #ffffff">
+                              Seu produto já está pronto para ser resgatado. Clique em “Resgatar” para acessar.
+                            </p>
+                            <p style="margin: 0 0 14px 0; font-size: 13px; color: #9ca3af; line-height: 1.5">
+                              Esperamos que você tenha curtido nosso produto. Caso tenha dúvidas sobre como utilizar,
+                              entre em contato conosco.
+                            </p>
+
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+                              <tbody>
+                                <tr>
+                                  <td class="stack" style="padding: 0 0 8px 0">
+                                    <table
+                                      border="0"
+                                      cellpadding="0"
+                                      cellspacing="0"
+                                      role="presentation"
+                                      class="btn"
+                                      style="border-collapse: separate"
+                                    >
+                                      <tbody>
+                                        <tr>
+                                          <td
+                                            align="center"
+                                            bgcolor="#3b82f6"
+                                            style="
+                                              border-radius: 12px;
+                                              background-color: #3b82f6;
+                                              border: 1px solid rgba(96, 165, 250, 0.55);
+                                            "
+                                          >
+                                            <a
+                                              href="<%= cc.store.active_domain %>/order/<%= cc.order.internal_id %>"
+                                              target="_blank"
+                                              style="
+                                                display: inline-block;
+                                                padding: 12px 16px;
+                                                font-size: 14px;
+                                                font-weight: 900;
+                                                color: #ffffff;
+                                                text-decoration: none;
+                                                min-width: 180px;
+                                                text-align: center;
+                                                line-height: 1;
+                                                mso-line-height-rule: exactly;
+                                              "
+                                              >Resgatar</a
+                                            >
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                  <td class="stack" align="right" style="padding: 0 0 8px 0">
+                                    <a
+                                      class="btn"
+                                      href="<%= cc.store.active_domain %>"
+                                      target="_blank"
+                                      style="
+                                        background-color: rgba(59, 130, 246, 0.18);
+                                        color: #ffffff;
+                                        text-decoration: none;
+                                        font-weight: 800;
+                                        font-size: 14px;
+                                        border-radius: 12px;
+                                        padding: 12px 16px;
+                                        display: inline-block;
+                                        text-align: center;
+                                        min-width: 180px;
+                                        border: 1px solid rgba(59, 130, 246, 0.22);
+                                      "
+                                      >Preciso de ajuda</a
+                                    >
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <div style="height: 14px; line-height: 14px; font-size: 0">&nbsp;</div>
+                  </td>
+                </tr>
+                <% }) %>
+
+                <!-- Card 3 — Feedback -->
+                <tr>
+                  <td class="px" style="padding: 0 24px">
+                    <table
+                      width="100%"
+                      border="0"
+                      cellpadding="0"
+                      cellspacing="0"
+                      role="presentation"
+                      style="background-color: #191c20; border-radius: 16px"
+                    >
+                      <tbody>
+                        <tr>
+                          <td style="padding: 20px">
+                            <p style="margin: 0 0 10px 0; font-size: 14px; font-weight: 900; color: #ffffff">
+                              Deixe seu feedback sobre nós
+                            </p>
+                            <p style="margin: 0 0 14px 0; font-size: 18px; letter-spacing: 2px; color: #ffffff">
+                              ☆☆☆☆☆
+                            </p>
+                            <a
+                              class="btn"
+                              href="<%= cc.store.active_domain %>"
+                              target="_blank"
+                              style="
+                                background-color: #3b82f6;
+                                color: #ffffff;
+                                text-decoration: none;
+                                font-weight: 900;
+                                font-size: 14px;
+                                border-radius: 12px;
+                                padding: 12px 16px;
+                                display: inline-block;
+                                text-align: center;
+                                min-width: 220px;
+                              "
+                              >Deixar feedback</a
+                            >
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td style="height: 16px; line-height: 16px; font-size: 0">&nbsp;</td>
+                </tr>
+
+                <!-- Rodapé -->
+                <tr>
+                  <td class="px" style="padding: 0 24px 22px 24px">
+                    <p style="margin: 0; font-size: 12px; color: #9ca3af">
+                      Email enviado por
+                      <a
+                        href="<%= cc.store.active_domain %>"
+                        style="color: #93c5fd; text-decoration: none"
+                        target="_blank"
+                        ><%= cc.store.active_domain.replace("http://", "") %></a
+                      >
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
+<!--/$-->
