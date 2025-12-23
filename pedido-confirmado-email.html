@@ -94,24 +94,22 @@
                             >
                               <img
                                 src="https://i.ibb.co/ksnP6q2C/Design-sem-nome-9.png"
-                                width="56"
-                                height="56"
+                                width="140"
                                 alt="Logo"
                                 style="
                                   display: block;
-                                  width: 56px;
-                                  height: 56px;
+                                  width: 140px;
+                                  max-width: 140px;
+                                  height: auto;
                                   border: 0;
                                   outline: none;
-                                  border-radius: 14px;
+                                  border-radius: 16px;
                                 "
                               />
                             </a>
                           </td>
 
                           <td align="right" valign="middle" style="padding: 0">
-                            <!-- Observação: copiar automático via clique não é confiável em e-mail.
-                                 Aqui deixamos o texto selecionável + link para o pedido. -->
                             <a
                               href="<%= cc.store.active_domain %>/order/<%= cc.order.internal_id %>"
                               target="_blank"
@@ -124,7 +122,6 @@
                                 -webkit-user-select: all;
                                 user-select: all;
                               "
-                              title="Toque para selecionar"
                               >#<%= cc.order.internal_id %></a
                             >
                           </td>
@@ -247,7 +244,6 @@
                               <tbody>
                                 <tr>
                                   <td class="stack" style="padding: 0 0 8px 0">
-                                    <!-- Botão "bulletproof" para funcionar em mais clientes -->
                                     <table
                                       border="0"
                                       cellpadding="0"
